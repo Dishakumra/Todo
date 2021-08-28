@@ -1,0 +1,70 @@
+.container {
+	height: 100%;
+	width: 350px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.heading {
+	text-transform: uppercase;
+}
+
+.inputContainer {
+	width: 100%;
+}
+
+.addTodoContainer {
+	width: 100%;
+	display: flex;
+}
+
+.saveButton {
+	font-size: 18px;
+}
+.addTodoContainer  input {
+	width: 100%;
+	font-size: 18px;
+}
+
+.listContainer {
+	list-style-type: none;
+	padding: 0px;
+}
+
+.todoItem {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.todoListContainer {
+	width: 100%;
+}
+
+.todoListContainer li {
+	padding: 10px;
+	font-size: 26px;
+}
+
+.todoTextContainer {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.iconContainer {
+	font-size: 24px;
+}
+
+.iconContainer span {
+	padding-left: 8px;
+	transition: 0.2s ease-in;
+}
+
+.iconContainer span:hover {
+	transform: scale(1.2);
+}

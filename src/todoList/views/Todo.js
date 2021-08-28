@@ -7,18 +7,19 @@ export default
     const [updatedTodoValue,setUpdatedTodoValue]=useState(props.todoText);
 
     return (
-        <div>
+        <div className="todoItem">
             {isEditing ?
                 <div>
-                    <Input inputvalue={updatedTodoValue} handleInputDone={()=>{props.updateTodo(props.index,updatedTodoValue);setIsEditing(false)}} setInputValue={setUpdatedTodoValue} />
+                    <Input placeholder='update todo' inputvalue={updatedTodoValue} handleInputDone={()=>{props.updateTodo(props.index,updatedTodoValue);setIsEditing(false)}} setInputValue={setUpdatedTodoValue} />
                 </div>
                 :
-                <div>
-                    {props.todoText}
-
+                <div className="todoTextContainer">
+                    <div>{props.todoText}</div>
+					<div className="iconContainer">
                     <EditFilled onClick={()=>{setIsEditing(true);
                     setUpdatedTodoValue(props.todoText)}}/>
                     <DeleteFilled onClick={() => props.deleteTodo(props.index)} />
+					</div>
                 </div>
             }
         </div>
